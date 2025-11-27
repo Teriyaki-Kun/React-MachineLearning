@@ -1,7 +1,10 @@
 import React from 'react'
 import FormPredict from '../Components/formPredict'
+import { data } from 'react-router'
 
 function PredictDiabetesPage() {
+const [isLoading, setLoading, setPredictResult, predictResult] = React.useState(false)
+
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center">
        <div className="grid grid-cols-2 gap-5 bg-black p-5 rounded-2xl max-w-6xl shadow w-full">
@@ -13,10 +16,10 @@ function PredictDiabetesPage() {
           </p>
         </div>
         <div>
-          <FormPredict/>
+          <FormPredict isLoading={isLoading} setLoading={setLoading} setPredictResult={setPredictResult} />
         </div>
         <div>
-          Right
+          HASIL PREDIKSI : {predictResult === 0 ? 'Negative' : 'Positive'}
         </div>
        </div>
     </div>
