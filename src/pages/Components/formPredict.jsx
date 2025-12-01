@@ -22,12 +22,11 @@ function FormPredict({
     })
 
     const onHandleChange = (event) => {
-            const { name, value, type } = event.target
-            const parsedValue = (type === 'number') ? (value === '' ? '' : Number(value)) : value
-            setForm(prev => ({
-                ...prev,
-                [name]: parsedValue
-            }))
+            const { name, value} = event.target
+            setForm({
+                ...form,
+                [name]:value
+            })
         }
 
         const handleSubmit = async (event) => {
