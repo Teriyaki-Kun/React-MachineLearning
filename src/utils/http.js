@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const http = axios.create({
-  baseURL: "https://if31flask-python-production.up.railway.app/",
+  baseURL: "https://if31flask-python-production.up.railway.app/api",
   headers: {
     Accept: "application/json",
   },
