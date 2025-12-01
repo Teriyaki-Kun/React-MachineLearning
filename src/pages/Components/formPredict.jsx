@@ -35,7 +35,7 @@ function FormPredict({
 
             setLoading(true)
             try {
-                const responst = await http.post('/predict-diabetes', form)
+                const response = await http.post('/predict', form)
                 
                 const {data,meta} = response.data
                  
